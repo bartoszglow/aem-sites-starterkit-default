@@ -18,6 +18,38 @@
 //
 //## Gray and brand colors for use across theme.
 
+$accent-400:             #3D84EF;
+$accent-500:             #336DFF;
+$accent-600:             #2954FF;
+$accent-700:             #1F39FF;
+$accent-800:             #172BC4;
+$accent-900:             #0F1F95;
+
+$grey-50:                #FFFFFF;
+$grey-75:                #FAFAFA;
+$grey-100:               #F4F5F5;
+$grey-200:               #EAEBEB;
+$grey-300:               #DFE1E2;
+$grey-400:               #B5B8BA;
+$grey-500:               #959A9D;
+$grey-600:               #767B7F;
+$grey-700:               #545D63;
+$grey-800:               #333F47;
+$grey-900:               #172026;
+
+$red-400:                #ECCB62;
+$red-500:                #E34850;
+$red-600:                #D7373F;
+$red-700:                #C9252D;
+$red-800:                #A11E24;
+
+$green-400:              #33AB84;
+$green-500:              #2D9D78;
+$green-600:              #268E6C;
+$green-700:              #12805C;
+$green-800:              #096245;
+
+
 $black:                  #202020;
 $gray:                   #696969;
 $gray-light:             #EBEBEB;
@@ -29,17 +61,17 @@ $blue:                   #0045FF;
 $pink:                   #FF0058;
 
 
-$brand-primary:           $yellow;
+$brand-primary:          $accent-600;
 
 //== Layout
-$gutter-padding: 14px;
+$gutter-padding:         14px;
 
-$max-width: 1164px;
-$max-body-width: 1680px;
-$screen-xsmall: 475px;
-$screen-small: 767px;
-$screen-medium: 1024px;
-$screen-large: 1200px;
+$max-width:              1164px;
+$max-body-width:         1680px;
+$screen-xsmall:          475px;
+$screen-small:           767px;
+$screen-medium:          1024px;
+$screen-large:           1200px;
 
 //== Scaffolding
 //
@@ -48,7 +80,7 @@ $screen-large: 1200px;
 //** Background color for `<body>`.
 $body-bg:                   $white;
 //** Global text color on `<body>`.
-$text-color:                $black;
+$text-color:                $grey-900;
 $text-color-inverse:        $gray-light;
 
 $brand-secondary:           $black;
@@ -58,12 +90,12 @@ $brand-third:               $gray-light;
 //** Global textual link color.
 $link-color:                $blue;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $link-color;
+$link-hover-color:          $link-color;
 //** Link hover decoration.
-$link-hover-decoration: underline;
+$link-hover-decoration:     underline;
 
-$nav-link: $black;
-$nav-link-inverse: $gray-light;
+$nav-link:                  $black;
+$nav-link-inverse:          $gray-light;
 
 
 
@@ -78,9 +110,9 @@ $font-family-base:        $font-family-sans-serif;
 $font-size-base:          18px;
 $font-size-large:         24px;
 $font-size-xlarge:        48px;
-$font-size-medium:		  18px;
+$font-size-medium:        18px;
 $font-size-small:         14px;
-$font-size-xsmall:		  12px;
+$font-size-xsmall:        12px;
 
 $font-size-h1:            40px;
 $font-size-h2:            36px; 
@@ -93,23 +125,23 @@ $font-size-h6:            10px;
 $line-height-base:        1.5;
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
-$font-weight-light:      300;
-$font-weight-normal:     normal;
-$font-weight-semi-bold:  400;
-$font-weight-bold:       600;
+$font-weight-light:       300;
+$font-weight-normal:      normal;
+$font-weight-semi-bold:   400;
+$font-weight-bold:        600;
 
 //=== Page Layout
-$header-height: 200px;
-$header-mobile-height: 130px;
-$utility-nav-height: 25px;
+$header-height:           200px;
+$header-mobile-height:    130px;
+$utility-nav-height:      25px;
 
 //=== Language Switcher
 //** Load country flags from this directory.
-$country-flag-path:          '../resources/images/country-flags';
-$country-flag-size:          25px;
+$country-flag-path:       '../resources/images/country-flags';
+$country-flag-size:       25px;
 
 //=== WKND Item Styles (Up Next, CF elements)
-$list-item-height: 120px;
-$list-item-border: 5px solid $brand-third;
+$list-item-height:        120px;
+$list-item-border:        5px solid $brand-third;
 
-$button-size: 48px;
+$button-size:             40px;
