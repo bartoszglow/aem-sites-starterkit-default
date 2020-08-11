@@ -8,7 +8,7 @@ const TSLintPlugin            = require('tslint-webpack-plugin');
 const CopyWebpackPlugin       = require('copy-webpack-plugin');
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 
-const SOURCE_ROOT = __dirname + '/src/main/webpack';
+const SOURCE_ROOT = __dirname + '/src';
 
 module.exports = {
         resolve: {
