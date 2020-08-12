@@ -1,36 +1,110 @@
 .button {
-    display:flex;
+    display: flex;
 }
 
 .cmp-button {
     text-transform: uppercase;
-    color:$black;
+    color: $white;
     font-size: $font-size-small;
-    background-color: $brand-third;
+    background-color: $accent-600;
+    border: 2px solid $accent-600;
     font-weight: $font-weight-bold;
     float: left;
     height: $button-size;
     min-width: $button-size;
+    border-radius: 40px;
 
     .cmp-button__text {
-        padding: 1rem 2rem;
-        float:left;
+        padding: 10px 2rem;
+        float: left;
+    }
+
+    &:hover {
+        background-color: $accent-700;
+    }
+
+    &:active {
+        background-color: $accent-800;
+        border: 2px solid $accent-800;
+    }
+
+    &:disabled {
+        background-color: $grey-200;
+        color: $grey-400;
     }
 }
 
 // primary variation
 .cmp-button--primary {
-
     .cmp-button {
-        background-color: $brand-primary;
+        background-color: $grey-50;
+        border: 2px solid $grey-800;
+        color: $grey-800;
+
+        &:hover {
+            background-color: $grey-800;
+            color: $grey-50;
+        }
+
+        &:active {
+            background-color: $accent-900;
+            color: $grey-50;
+        }
+
+        &:disabled {
+            background-color: $grey-50;
+            color: $grey-200;
+            border-color: $grey-200;
+        }
     }
 }
 
 // secondary variation
 .cmp-button--secondary {
-
     .cmp-button {
-        background-color: $brand-secondary;
-        color: $text-color-inverse;
+        background-color: $grey-50;
+        border: 2px solid $grey-600;
+        color: $grey-600;
+
+        &:hover {
+            background-color: $grey-600;
+            color: $grey-50;
+        }
+
+        &:active {
+            background-color: $grey-700;
+            color: $grey-50;
+        }
+
+        &:disabled {
+            background-color: $grey-50;
+            color: $grey-200;
+            border-color: $grey-200;
+        }
+    }
+}
+
+// negative variation
+.cmp-button--negative {
+    .cmp-button {
+        background-color: $grey-50;
+        border: 2px solid $red-600;
+        color: $red-600;
+
+        &:hover {
+            background-color: $red-600;
+            color: $grey-50;
+        }
+
+        &:active {
+            background-color: $red-700;
+            color: $grey-50;
+        }
+
+        &:disabled {
+            background-color: $grey-50;
+            color: $grey-200;
+            border-color: $grey-200;
+        }
     }
 }
