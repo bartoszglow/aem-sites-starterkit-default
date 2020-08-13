@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Theme part of default AEM starterkit",
   "private": true,
-  "main": "src/main/webpack/site/main.ts",
+  "main": "src/site/main.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
     "dev": "webpack -d --env dev --config ./webpack.dev.js && clientlib --verbose",

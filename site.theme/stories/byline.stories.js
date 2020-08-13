@@ -1,5 +1,5 @@
 import { document, console } from 'global';
-import '../src/main/webpack/site/main.scss';
+import '../src/site/main.scss';
 import '../.storybook/story-styles.css';
 
 export default {
