@@ -11,8 +11,8 @@ The main parts of the project are:
 
 * **site.content**: mutable content (not /apps) that is integral to the running of the site. This include template types, templates, experience fragments, policies, pages and assets.
 * **site.theme**: front-end module which provides styling (CSS) and behavior (JS) for your AEM website.
-* **design**: xd design files which are prepared by designers and used by front-end developers to implement theme part of Starter Kit.
-* **preview**: screenshoots presenting Starter Kit Theme which are used by Site Wizard inside of AEM to preview look of theme for the AEM Author.
+* **designs**: xd design files which are prepared by designers and used by front-end developers to implement theme part of Starter Kit.
+* **previews**: screenshoots presenting Starter Kit Theme which are used by Site Wizard inside of AEM to preview look of theme for the AEM Author.
 
 ## Site Content
 
