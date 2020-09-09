@@ -1,0 +1,12 @@
+{
+  "name": "default",
+  "title": "AEM default Starter Kit",
+  "description": "Starter kit provides default theme of the page and some sample content. You can use it to build basic pages.",
+  "version": "0.0.1",
+  "createdBy": "Adobe",
+  "useCases": ["Magazine website"],
+  "docsUrl": "https://github.com/bartoszglow/aem-sites-starterkit-default",
+  "showcaseUrl": "https://aemcomponents.dev",
+  "sourceRepositoryUrl": "https://github.com/bartoszglow/aem-sites-starterkit-default",
+  "license": "SEE LICENSE IN LICENSE.txt"
+}

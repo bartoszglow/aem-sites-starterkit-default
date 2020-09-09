@@ -9,7 +9,6 @@ const CopyWebpackPlugin       = require('copy-webpack-plugin');
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + '/src';
-const SITE = 'wkndsk';
 
 module.exports = {
         resolve: {
@@ -22,7 +21,7 @@ module.exports = {
             site: SOURCE_ROOT + '/site/main.js'
         },
         output: {
-            filename: 'jcr_root/content/' + SITE + '/_theme/js/[name].bundle.js',
+            filename: 'js/theme.js',
             path: path.resolve(__dirname, 'dist')
         },
         optimization: {
@@ -98,15 +97,18 @@ module.exports = {
             new CleanWebpackPlugin(),
             new webpack.NoEmitOnErrorsPlugin(),
             new MiniCssExtractPlugin({
-                filename: 'jcr_root/content/' + SITE + '/_theme/css/[name].bundle.css',
+                filename: 'css/theme.css',
             }),
             new TSLintPlugin({
                 files: [SOURCE_ROOT + '/**/*.ts', SOURCE_ROOT + '/**/*.tsx'],
                 config: './tslint.json'
             }),
             new CopyWebpackPlugin([
-                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './jcr_root/content/' + SITE + '/_theme/resources' }
-            ])
+                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './resources' }
+            ]),
+            new webpack.optimize.LimitChunkCountPlugin({
+                maxChunks: 1
+            })
         ],
         stats: {
             assetsSort: "chunks",

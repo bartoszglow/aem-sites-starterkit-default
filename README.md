@@ -1,61 +1,78 @@
 # Default Sites Starter Kit
 
-This is the Default Sites Starter Kit for rapid site development with AEM.
-
+This is the Sites Starter Kit for the AEM Components Reference site: [https://aemcomponents.dev/](https://aemcomponents.dev/)
 
 ## What does the Starter Kit contain?
 
 <img src="https://user-images.githubusercontent.com/143527/89645292-c1313b80-d8b9-11ea-9ec4-3af8e8b1c92b.png" />
 
-The main parts of the project are:
+#### Site Template
 
-* **site.content**: mutable content (not /apps) that is integral to the running of the site. This include template types, templates, experience fragments, policies, pages and assets.
-* **site.theme**: front-end module which provides styling (CSS) and behavior (JS) for your AEM website.
-* **designs**: xd design files which are prepared by designers and used by front-end developers to implement theme part of Starter Kit.
-* **previews**: screenshoots presenting Starter Kit Theme which are used by Site Wizard inside of AEM to preview look of theme for the AEM Author.
+Content sources for the Default Stater Kit. It contains:
+- sample pages,
+- templates,
+- CA configurations,
+- DAM assets,
+- experience fragments.
 
-## Site Content
+#### Site Theme
 
-Build and deploy content package to AEM instance.
+Theme sources for the Default Stater Kit. It contains styling (CSS) and behavior (JS) for the Core Components and the build system (webpack).
 
-### Build 
+#### Files
 
-```
-cd site.template
-mvn clean install
-```
+Folder containing UI Kit related to the Default Starter Kit.
 
-## Site Theme
+#### Previews
+
+Folder including images previewing Default Starter Kit which are visible in the AEM Site Wizard.
+
+## Starter kit
+
+To package and deploy starter kit to AEM instance you need to:
 
 ### Prerequisite
 
-Before using Site Theme you need to go into `site.theme` folder and install npm modules.
-
-```
-cd site.theme
-npm install
-```
+Install Maven (to be able to use the packaging script).
 
 ### Build
 
-Build all JS / SCSS sources into compiled files.
+To build the starter kit, run following command at the project root:
 
 ```
-npm run dev
+npm run build
+```
+This commands generates the starter kit zip file `starterkit.zip` below the project root.
+
+#### Build step by step
+
+If you want to build `startetkit.zip` step by step here are the full instructions. This is what the full build does behind the scenes.
+All the commands need to be run at the project root.
+
+1. Compile the Starter Kit theme:
+```
+npm run build:theme
 ```
 
-### Live preview
-
-Run live preview proxy server for AEM instance to see changes from your code immediately in the browser.
-
+2. Create a theme clientlib and put it into template:
 ```
-npm run live
+npm run build:clientlib
 ```
 
-### Proxy
+3. Create a content package from site.template:
+```
+npm run build:template
+```
 
-Run proxy proxy server to preview AEM instance with compiled version of Starter Kit Theme.
+4. Package everything into starterkit.zip:
+```
+npm run build:package
+```
+
+### Deploy
+
+Deploy `startekit.zip` to a local AEM instance.
 
 ```
-npm run live
+npm run deploy
 ```
