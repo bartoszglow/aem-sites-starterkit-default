@@ -1,6 +1,6 @@
 module.exports = {
      context: __dirname,
-     clientLibRoot: "./site.template/src/main/content/jcr_root/conf/wkndsk/settings/wcm/clientlibs",
+     clientLibRoot: "./site.template/src/main/content/jcr_root/conf/default/settings/wcm/clientlibs",
      libs: [
          {
              name: "theme",
